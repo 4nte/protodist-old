@@ -1,6 +1,5 @@
 builds:
-  - main: ./main.go
-    id: "protodist"
+  - id: "protodist"
     binary: protodist
     env:
       - CGO_ENABLED=0
