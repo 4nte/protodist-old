@@ -1,5 +1,5 @@
 <p align="center">
-<img width="600" src="assets/logo.png" alt="Protodist" title="Protodist" />
+<img width="600" src="assets/logo2.png" alt="Protodist" title="Protodist" />
 </p>
 
 ![docker](https://img.shields.io/github/go-mod/go-version/4nte/protodist)
