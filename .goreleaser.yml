@@ -20,3 +20,29 @@ release:
   # If set to true, will mark the release as not ready for production.
   # Default is false.
   prerelease: auto
+dockers:
+  -
+    goos: linux
+    goarch: amd64
+    goarm: ''
+
+    # Name templates of the built binaries that should be used.
+    binaries:
+      - protodist
+
+    # Templates of the Docker image names.
+    image_templates:
+      - "antegulin/protodist:latest"
+      - "antegulin/protodist:{{ .Tag }}"
+      - "antegulin/protodist:v{{ .Major }}"
+
+    # Path to the Dockerfile (from the project root).
+    dockerfile: Dockerfile
+
+    # Template of the docker build flags.
+    build_flag_templates:
+      - "--pull"
+      - "--label=org.opencontainers.image.created={{.Date}}"
+      - "--label=org.opencontainers.image.name={{.ProjectName}}"
+      - "--label=org.opencontainers.image.revision={{.FullCommit}}"
+      - "--label=org.opencontainers.image.version={{.Version}}"

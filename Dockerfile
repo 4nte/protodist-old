@@ -1,5 +1,4 @@
-FROM golang:alpine as protodist-builder
+FROM antegulin/protobuf-builder:master
 
-FROM scratch
 COPY protodist /
 ENTRYPOINT ["/protodist"]
