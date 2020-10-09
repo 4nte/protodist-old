@@ -2,6 +2,7 @@ name: Release with goreleaser
 on:
   push:
     branches:
+      - "dev"
     tags:
       - "v*.*.*"
 jobs:
