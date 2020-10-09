@@ -5,7 +5,6 @@ import (
 	"github.com/4nte/protodist/distribution"
 
 	"github.com/go-git/go-git/v5/plumbing/transport/http"
-	"gopkg.in/src-d/go-git.v4/plumbing/transport/ssh"
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"path"
@@ -16,7 +15,7 @@ type GitContext struct {
 	Tag    string
 }
 type Config struct {
-	SshAuth         ssh.AuthMethod
+	//SshAuth         ssh.AuthMethod
 	HttpAuth        http.AuthMethod
 	ProtoOutDir     string
 	GitCloneDir     string
