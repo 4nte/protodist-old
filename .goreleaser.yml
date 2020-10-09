@@ -20,7 +20,7 @@ release:
   # If set to true, will mark the release as not ready for production.
   # Default is false.
   prerelease: auto
-  skip_push: false
+
 dockers:
   -
     goos: linux
@@ -47,3 +47,4 @@ dockers:
       - "--label=org.opencontainers.image.name={{.ProjectName}}"
       - "--label=org.opencontainers.image.revision={{.FullCommit}}"
       - "--label=org.opencontainers.image.version={{.Version}}"
+    skip_push: false
