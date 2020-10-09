@@ -28,6 +28,10 @@ func LoadAppConfig() (config.Config, error) {
 
 	protoImportPath := viper.GetStringSlice("PROTO_IMPORT_PATH")
 
+	if gitAccessToken == "" {
+		fmt.Println("warning: GIT_ACCESS_TOKEN is empty")
+	}
+
 	if gitUser == "" {
 		return config.Config{}, fmt.Errorf("PROTODIST_GIT_USER must be set")
 	}
