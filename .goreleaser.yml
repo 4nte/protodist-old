@@ -20,6 +20,7 @@ release:
   # If set to true, will mark the release as not ready for production.
   # Default is false.
   prerelease: auto
+  skip_push: false
 dockers:
   -
     goos: linux
