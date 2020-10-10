@@ -53,7 +53,7 @@ func compileStrategy(strategy distribution.Strategy, protodistCfg config.Protodi
 		return fmt.Errorf("failed to create a temporary proto root dir: %s", err)
 	}
 	if err := util.CopyDirContents(protoRepoDir, tempProtoDir); err != nil {
-		return fmt.Errorf("failed to copy proto repo to temporary dir: %s", err)
+		return fmt.Errorf("failed to copy proto repo to temporary dir (%s -> %s): %s", protoRepoDir, tempProtoDir, err)
 	}
 
 	// Load packages from proto dir
