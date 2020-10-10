@@ -126,6 +126,7 @@ func init() {
 	rootCmd.PersistentFlags().StringVar(&gitBranch, "git_branch", "", "git branch")
 	rootCmd.PersistentFlags().StringVar(&gitUser, "git_user", "", "git user")
 	rootCmd.PersistentFlags().StringVar(&gitTag, "git_tag", "", "git tag")
+	rootCmd.PersistentFlags().StringVar(&protoDir, "proto_dir", ".", "proto repo directory")
 	rootCmd.PersistentFlags().StringVar(&gitAccessToken, "git_access_token", "", "git access token")
 	rootCmd.PersistentFlags().StringVar(&protoOutDir, "proto_out_dir", "/tmp/protodist/out", "output directory")
 	rootCmd.PersistentFlags().StringVar(&gitCloneDir, "git_clone_dir", "/tmp/protodist/clone", "git clone directory")
